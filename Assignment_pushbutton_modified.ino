@@ -71,7 +71,6 @@ if (stateNow != stateBefore) {
 
   }
 
-
 }
 
 stateBefore = stateNow;
