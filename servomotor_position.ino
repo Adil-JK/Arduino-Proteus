@@ -26,22 +26,22 @@ void loop()
  for (myAngle=0; myAngle<=180; myAngle++)
  {
  servoPulse(servoPin, myAngle); // send pin and angle
- delay(1); // refresh cycle
  digitalWrite(position0_led, HIGH);
  digitalWrite(position180_led, LOW);
  Serial.print("Servo motor position is at "); 
  Serial.println(myAngle);
+ delay(1); // refresh cycle
  }
 
  // servo starts at 180 deg and rotates to 0 deg
  for (myAngle=180; myAngle>=0; myAngle--)
  {
  servoPulse(servoPin, myAngle); // send pin and angle
- delay(1); // refresh cycle
  digitalWrite(position0_led, LOW);
  digitalWrite(position180_led, HIGH);
  Serial.print("Servo motor position is at ");
  Serial.println(myAngle);
+ delay(1); // refresh cycle
  }
  
 }
