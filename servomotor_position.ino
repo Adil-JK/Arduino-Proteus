@@ -42,6 +42,5 @@ void loop()
  Serial.print("Servo motor position is at ");
  Serial.println(myAngle);
  delay(1); // refresh cycle
- }
- 
+ } 
 }
