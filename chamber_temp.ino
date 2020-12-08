@@ -25,6 +25,7 @@ if (voltage1 > 0.50 && voltage2 > 0.50)
   digitalWrite(fan_1, HIGH);
   digitalWrite(fan_2, HIGH);
 }
+  
 else if (voltage1 < 0.50 && voltage2 < 0.50) {
   digitalWrite(fan_1, LOW);
   digitalWrite(fan_2, LOW);
