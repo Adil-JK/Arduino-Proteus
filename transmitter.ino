@@ -1,36 +1,24 @@
+// First mistake ia your conditions after line 18 cannot be true because it is inside the main if condition
 const int button = 3;
-bool current_state = false;
-bool previous_state = false;
-int i=0;
+bool btnState;
+bool state = false;
 
 void setup() {
-
-Serial.begin(9600);
-pinMode(button, INPUT);
-
+    Serial.begin(9600);
+    pinMode(button, INPUT);
 }
 
 void loop() {
-  current_state = digitalRead(button);
-  if (current_state != previous_state) {
-    if (current_state==true and i==0){
-    Serial.write(1);
+  btnState = digitalRead(button);
+  if(btnState == true){
+      if(state){
+          Serial.write(1);
+          state = false;
+      }
+      else{
+          Serial.write(2);
+          state = true;
+      }
   }
   
-  else if (current_state==false and i==0) {
-    Serial.write(2);
-    i=1;
-  }
-
-  if (current_state==true and i==1) {
-    Serial.write(3);
-  }
-
-  else if (current_state==false and i==1) {
-    Serial.write(4);
-    i=0;
-  }
-  } 
-  current_state=previous_state;
-
 }
