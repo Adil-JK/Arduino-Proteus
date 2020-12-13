@@ -11,10 +11,12 @@ void loop() {
         if(state){
             Serial.write('1');
             state = false;
+            delay(100);
         }
         else{
             Serial.write('2');
             state = true;
+            delay(100);
         }
     }
 }
