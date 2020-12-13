@@ -10,10 +10,10 @@ void setup() {
 void loop() {
   btnState = digitalRead(button);
   if(btnState == true){
-      Serial.write(1);
+      Serial.write('1');
   }
   else{
-      Serial.write(2);
+      Serial.write('2');
       delay(100);
   }
   

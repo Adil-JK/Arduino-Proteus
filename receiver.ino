@@ -12,7 +12,7 @@ void loop() {
     if(Serial.available()){
         value = Serial.read();
     }
-    if (value == 1){
+    if (value == '1'){
         state = true;
     }
     else{
