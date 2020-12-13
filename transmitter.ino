@@ -25,7 +25,7 @@ bool debounce(int buttonPin){
   bool stateNow = digitalRead(buttonPin);
   if(stateNow == HIGH)
   {
-    delay(50);
+    delay(20);
     stateNow = digitalRead(buttonPin);
   }
   return stateNow;
