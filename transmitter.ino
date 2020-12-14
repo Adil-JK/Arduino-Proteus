@@ -18,12 +18,10 @@ void loop() {
         if(state){
             Serial.write('1');
             state = false;
-            delay(100);
         }
         else{
             Serial.write('2');
             state = true;
-            delay(100);
         }
     }
     duration = 0;
@@ -33,7 +31,7 @@ bool debounce(int buttonPin){
   bool stateNow = digitalRead(buttonPin);
   if(stateNow == HIGH)
   {
-    delay(20);
+    delay(15);
     stateNow = digitalRead(buttonPin);
   }
   return stateNow;
